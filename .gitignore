@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# downloaded data, cached features and raw run outputs are never committed
+outputs/
+*.npz
+*.npy
+*.pt
+
+.DS_Store
+.ipynb_checkpoints/

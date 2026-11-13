@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fewshot"
+version = "1.0.0"
+description = "How few labels do you need? Few-shot benchmark of classical, fine-tuned and frozen foundation-model classifiers on MedMNIST."
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Adnan Haider" }]
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0",
+    "torchvision>=0.15",
+    "transformers>=4.40",
+    "medmnist>=3.0",
+    "numpy>=1.23",
+    "scipy>=1.10",
+    "scikit-learn>=1.3",
+    "scikit-image>=0.21",
+    "matplotlib>=3.6",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
